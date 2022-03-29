@@ -1,0 +1,61 @@
+==30889== Memcheck, a memory error detector
+==30889== Copyright (C) 2002-2017, and GNU GPL'd, by Julian Seward et al.
+==30889== Using Valgrind-3.15.0 and LibVEX; rerun with -h for copyright info
+==30889== Command: ./Driver
+==30889== 
+Enter an infix expression with spaces between 
+each token or enter QUIT to quit: ==30889== Invalid write of size 8
+==30889==    at 0x404287: Array<Expr_Command*>::resize(unsigned long) (in /home/dkercher/363/Assignment3/Driver)
+==30889==    by 0x402A29: Calculator::infix_to_postfix(Array<Expr_Command*>&) (in /home/dkercher/363/Assignment3/Driver)
+==30889==    by 0x4023BC: Calculator::evaluate(Array<std::string>) (in /home/dkercher/363/Assignment3/Driver)
+==30889==    by 0x401EC1: Calculator::calc(std::string) (in /home/dkercher/363/Assignment3/Driver)
+==30889==    by 0x402FCF: main (in /home/dkercher/363/Assignment3/Driver)
+==30889==  Address 0x5a25cd0 is 0 bytes after a block of size 16 alloc'd
+==30889==    at 0x4C2AC38: operator new[](unsigned long) (vg_replace_malloc.c:433)
+==30889==    by 0x40424E: Array<Expr_Command*>::resize(unsigned long) (in /home/dkercher/363/Assignment3/Driver)
+==30889==    by 0x402A29: Calculator::infix_to_postfix(Array<Expr_Command*>&) (in /home/dkercher/363/Assignment3/Driver)
+==30889==    by 0x4023BC: Calculator::evaluate(Array<std::string>) (in /home/dkercher/363/Assignment3/Driver)
+==30889==    by 0x401EC1: Calculator::calc(std::string) (in /home/dkercher/363/Assignment3/Driver)
+==30889==    by 0x402FCF: main (in /home/dkercher/363/Assignment3/Driver)
+==30889== 
+Result: 4
+Enter an infix expression with spaces between 
+each token or enter QUIT to quit: ==30889== Invalid write of size 8
+==30889==    at 0x404287: Array<Expr_Command*>::resize(unsigned long) (in /home/dkercher/363/Assignment3/Driver)
+==30889==    by 0x402A29: Calculator::infix_to_postfix(Array<Expr_Command*>&) (in /home/dkercher/363/Assignment3/Driver)
+==30889==    by 0x4023BC: Calculator::evaluate(Array<std::string>) (in /home/dkercher/363/Assignment3/Driver)
+==30889==    by 0x4021B7: Calculator::evaluate(Array<std::string>) (in /home/dkercher/363/Assignment3/Driver)
+==30889==    by 0x401EC1: Calculator::calc(std::string) (in /home/dkercher/363/Assignment3/Driver)
+==30889==    by 0x402FCF: main (in /home/dkercher/363/Assignment3/Driver)
+==30889==  Address 0x5a27040 is 0 bytes after a block of size 16 alloc'd
+==30889==    at 0x4C2AC38: operator new[](unsigned long) (vg_replace_malloc.c:433)
+==30889==    by 0x40424E: Array<Expr_Command*>::resize(unsigned long) (in /home/dkercher/363/Assignment3/Driver)
+==30889==    by 0x402A29: Calculator::infix_to_postfix(Array<Expr_Command*>&) (in /home/dkercher/363/Assignment3/Driver)
+==30889==    by 0x4023BC: Calculator::evaluate(Array<std::string>) (in /home/dkercher/363/Assignment3/Driver)
+==30889==    by 0x4021B7: Calculator::evaluate(Array<std::string>) (in /home/dkercher/363/Assignment3/Driver)
+==30889==    by 0x401EC1: Calculator::calc(std::string) (in /home/dkercher/363/Assignment3/Driver)
+==30889==    by 0x402FCF: main (in /home/dkercher/363/Assignment3/Driver)
+==30889== 
+Result: 18
+Enter an infix expression with spaces between 
+each token or enter QUIT to quit: Invalid expression
+Enter an infix expression with spaces between 
+each token or enter QUIT to quit: Invalid expression
+Enter an infix expression with spaces between 
+each token or enter QUIT to quit: Result: 9
+Enter an infix expression with spaces between 
+each token or enter QUIT to quit: ==30889== 
+==30889== HEAP SUMMARY:
+==30889==     in use at exit: 192 bytes in 8 blocks
+==30889==   total heap usage: 197 allocs, 189 frees, 4,720 bytes allocated
+==30889== 
+==30889== LEAK SUMMARY:
+==30889==    definitely lost: 192 bytes in 8 blocks
+==30889==    indirectly lost: 0 bytes in 0 blocks
+==30889==      possibly lost: 0 bytes in 0 blocks
+==30889==    still reachable: 0 bytes in 0 blocks
+==30889==         suppressed: 0 bytes in 0 blocks
+==30889== Rerun with --leak-check=full to see details of leaked memory
+==30889== 
+==30889== For lists of detected and suppressed errors, rerun with: -s
+==30889== ERROR SUMMARY: 4 errors from 2 contexts (suppressed: 0 from 0)
